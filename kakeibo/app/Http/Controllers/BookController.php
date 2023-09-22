@@ -16,4 +16,8 @@ class BookController extends Controller
         //books.indexはビューファイル名。booksフォルダ内のindex.blade.phpを表す
         //compactの記述がないと$booksを画面に表示させることができない
     }
+    
+    function show(Book $book) {
+        return view("books.show", compact("book"));
+    }
 }
