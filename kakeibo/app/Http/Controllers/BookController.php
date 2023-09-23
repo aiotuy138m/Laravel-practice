@@ -20,4 +20,8 @@ class BookController extends Controller
     function show(Book $book) {
         return view("books.show", compact("book"));
     }
+    
+    public function create() {
+        return view("books.create");
+    }
 }
