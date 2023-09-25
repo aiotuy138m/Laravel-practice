@@ -32,6 +32,7 @@ class BookController extends Controller
         $book->month = $request->input("month");
         $book->category = $request->input("category");
         $book->amount = $request->input("amount");
+        $book->memo = $request->input("memo");
         $book->save();
 
         return redirect()->route('books.show', $book);
@@ -47,6 +48,7 @@ class BookController extends Controller
         $book->month = $request->input("month");
         $book->category = $request->input("category");
         $book->amount = $request->input("amount");
+        $book->memo = $request->input("memo");
         $book->save();
 
         return redirect()->route("books.show", $book);
