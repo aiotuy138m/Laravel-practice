@@ -1,4 +1,4 @@
-@extends("layouts.layouts")
+@extends("layouts.app")
 
 @section("content")
   <h1>家計簿データを修正</h1>
