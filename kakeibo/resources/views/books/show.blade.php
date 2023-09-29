@@ -17,7 +17,13 @@
     </tr>
     <tr>
         <th>金額(次月目標)</th>
-        <td>{{ $book->amount }}万円({{$book->next_month_target}}万円)</td>
+        <td>{{ $book->amount }}万円
+          <?php
+            if ($book->next_month_target != null ):
+              print "({$book->next_month_target}万円)";
+            endif;
+          ?>
+        </td>
     </tr>
     <tr>
         <th>メモ</th>

@@ -17,7 +17,13 @@
         <td>{{ $book->year }}年{{ $book->month }}月</td>
         <td>{{ ($book->inout == 1) ? "収入" : "支出" }}</td>
         <td>{{ $book->category }}</td>
-        <td>{{ $book->amount }}万円({{$book->next_month_target}}万円)</td>
+        <td>{{ $book->amount }}万円
+          <?php
+            if ($book->next_month_target != null ):
+              print "({$book->next_month_target}万円)";
+            endif;
+          ?>
+        </td>
         <td>
           <a href="{{route('books.edit', $book)}}" class="btn btn-warning">編集</a>
           <a href="{{route('books.show', $book)}}" class="btn btn-info">詳細</a>
