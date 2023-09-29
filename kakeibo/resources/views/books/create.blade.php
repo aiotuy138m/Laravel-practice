@@ -36,6 +36,10 @@
           <input type="number" name="amount" id="product-name" class="form-control">
       </div>
       <div class="form-group">
+          <label for="product-name">次月目標</label>
+          <input type="number" name="next_month_target" id="product-name" class="form-control">
+      </div>
+      <div class="form-group">
         <label for="product-name">メモ</label>
         <input type="text" name="memo" class="form-control">
       </div>

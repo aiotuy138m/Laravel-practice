@@ -61,7 +61,7 @@ class BookController extends Controller
         $book->delete();
         return redirect()->route("books.index");
     }
-    
+
     private function checkMyData(Book $book) {
         if($book->user_id != Auth::user()->id) {
             return redirect()->route('books.index');
