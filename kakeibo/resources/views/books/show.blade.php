@@ -19,8 +19,8 @@
         <th>金額(次月目標)</th>
         <td>{{ $book->amount }}万円
           <?php
-            if ($book->next_month_target != null ):
-              print "({$book->next_month_target}万円)";
+            if ($book->next_month_target != null ): //次月目標がある時のみ表示
+              print "({$book->next_month_target}万円)"; 
             endif;
           ?>
         </td>
